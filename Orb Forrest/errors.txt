@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 62: end of line expected.
+    jump cavedoor;
+                 ^
+
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Sat Feb 11 18:39:12 2023

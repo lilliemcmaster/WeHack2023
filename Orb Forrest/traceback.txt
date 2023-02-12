@@ -1,0 +1,22 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 59, in script
+    jump cavedoor
+ScriptError: could not find label 'cavedoor'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 59, in script
+    jump cavedoor
+  File "/Users/lilliemcmaster/Desktop/renpy-8.0.3-sdk/renpy/ast.py", line 1974, in execute
+    rv = renpy.game.script.lookup(target)
+  File "/Users/lilliemcmaster/Desktop/renpy-8.0.3-sdk/renpy/script.py", line 927, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'cavedoor'.
+
+macOS-10.16-x86_64-i386-64bit x86_64
+Ren'Py 8.0.3.22090809
+Orb Forrest 1.0
+Sat Feb 11 18:39:52 2023
