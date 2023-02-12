@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 62: end of line expected.
-    jump cavedoor;
-                 ^
+File "game/script.rpy", line 11: expected 'word' not found.
+    define
+          ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sat Feb 11 18:39:12 2023
+Sat Feb 11 21:18:24 2023

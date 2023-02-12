@@ -1,22 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 59, in script
-    jump cavedoor
-ScriptError: could not find label 'cavedoor'.
+  File "game/script.rpy", line 58, in script
+    scene cave empty
+Exception: Image 'cave' does not accept attributes 'empty'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 59, in script
-    jump cavedoor
-  File "/Users/lilliemcmaster/Desktop/renpy-8.0.3-sdk/renpy/ast.py", line 1974, in execute
-    rv = renpy.game.script.lookup(target)
-  File "/Users/lilliemcmaster/Desktop/renpy-8.0.3-sdk/renpy/script.py", line 927, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'cavedoor'.
+  File "game/script.rpy", line 58, in script
+    scene cave empty
+  File "/Users/lilliemcmaster/Desktop/renpy-8.0.3-sdk/renpy/ast.py", line 1542, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "/Users/lilliemcmaster/Desktop/renpy-8.0.3-sdk/renpy/ast.py", line 1371, in show_imspec
+    renpy.config.show(name,
+  File "/Users/lilliemcmaster/Desktop/renpy-8.0.3-sdk/renpy/exports.py", line 686, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "/Users/lilliemcmaster/Desktop/renpy-8.0.3-sdk/renpy/display/image.py", line 414, in find_target
+    self.target = target._duplicate(a)
+  File "/Users/lilliemcmaster/Desktop/renpy-8.0.3-sdk/renpy/display/core.py", line 397, in _duplicate
+    args.extraneous()
+  File "/Users/lilliemcmaster/Desktop/renpy-8.0.3-sdk/renpy/display/core.py", line 265, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'cave' does not accept attributes 'empty'.
 
 macOS-10.16-x86_64-i386-64bit x86_64
 Ren'Py 8.0.3.22090809
 Orb Forrest 1.0
-Sat Feb 11 18:39:52 2023
+Sat Feb 11 21:03:09 2023
