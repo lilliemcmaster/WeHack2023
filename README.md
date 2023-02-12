@@ -22,3 +22,6 @@ We learned how to story build, manage scope, and code a visual novel style game.
 
 ## What's next for Orb Quest
 We want Orb Quest to be more than a Visual Novel Style game. Ideally, we would have an open world adventure game with text novel features. We would want more options in animation that provides more of visual interaction with the challenges. 
+
+Music by Slip.stream - "Chance And Happenstance" - https://slip.stream/tracks/d43c5e46-4f68-408c-b05f-b967e0561a8e
+Music by Slip.stream - "Daydream" - https://slip.stream/tracks/cbdb1b8f-f97f-4a36-95a7-0bd3ff9657c2
