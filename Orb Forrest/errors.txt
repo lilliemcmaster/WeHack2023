@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 11: expected 'word' not found.
-    define
-          ^
+File "game/script.rpy", line 64: expected menuitem
+    play music contemplate
+    ^
+
+File "game/script.rpy", line 84: expected menuitem
+    play music contemplate
+    ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sat Feb 11 21:18:24 2023
+Sat Feb 11 22:41:32 2023

@@ -8,12 +8,16 @@ define j = Character("Jonathon", who_color="#ff5e4f")
 define n = Character("Mysterious Voice", who_color="#4f87ff")
 define role = "unknown"
 define gui.text_font = "kongtext.TTF"
+define audio.Daydream = "audio/Daydream.mp3"
+define audio.contemplate = "audio/Chance And Happenstance.mp3"
+define audio.yay = "audio/Yay.mp3"
+
 # define gui.text_size = 50
 
 # The game starts here.
 
 label start:
-
+    play music Daydream
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
@@ -56,6 +60,7 @@ label intro:
     j "There's an evil scientist who is making Energy Orbs to disturb the balance of our sacred forest."
     j "I need your help to travel through the Forest and stop the scientist."
     scene cave empty
+    play music contemplate
 menu: 
     "Yes":
         j "You are so brave! Lets begin our adventure."
@@ -68,30 +73,44 @@ menu:
 return
 
 label railroad:
+    play music Daydream
     scene cave out
     n "You approach the cave exit."
     n "You have the options to use a pulley, a ladder, or hammer."
 python:
     flag = 1
 while flag == 1:
+    play music contemplate
     menu:
         "Ladder":
             j "Oooohhhh noooo. I've eaten way too many cookies so I won't be able to fit in that tiny crack on the top."
             j "We need to find a way to make more space."
         "Lift it":
             j "Okay let's pick it up on 1 .. 2 ... 3 ..."
+            scene cave lift
             j "eerrggghhhh .... [povname] I don't think we are strong enough to pick it up."
             j "Maybe we need a tool to help with the weight."
+            scene cave out
         "Pulley System":
             j "Great Idea! We can use a rope and a few wheels to spread out the weight of the boulder."
             j "The weight distrubution allows us to pull it up with less effort!"
-            scene cave up
+            scene cave pull
             n "The boulder lifts with the pulley system."
             python:
                 flag = 0
         n "How should you open the cave door?"
+scene cave up
+play music Daydream
+n "You have utilized Torque to exit the cave!"
 scene orb
+play sound yay
 n "You have earned an Orb!"
+scene outside
+j "Congrats on completing your first challenge!"
+j "Orbs can be collected to advance your quest to defeat the evil scientist."
+scene outside2
+j "Here is a map to help you on your adventure! Goodluck!"
+
 
 
 
